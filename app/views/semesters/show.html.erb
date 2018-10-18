@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @semester.numero %>
+</p>
+
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @semester.fecha_inicio %>
+</p>
+
+<%= link_to 'Edit', edit_semester_path(@semester) %> |
+<%= link_to 'Back', semesters_path %>

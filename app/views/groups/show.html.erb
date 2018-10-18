@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codgroup:</strong>
+  <%= @group.codgroup %>
+</p>
+
+<p>
+  <strong>Id subject:</strong>
+  <%= @group.id_subject %>
+</p>
+
+<p>
+  <strong>Id teacher:</strong>
+  <%= @group.id_teacher %>
+</p>
+
+<p>
+  <strong>Id student:</strong>
+  <%= @group.id_student %>
+</p>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

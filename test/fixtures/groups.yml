@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codgroup: MyString
+  id_subject: one
+  id_teacher: one
+  id_student: one
+
+two:
+  codgroup: MyString
+  id_subject: two
+  id_teacher: two
+  id_student: two

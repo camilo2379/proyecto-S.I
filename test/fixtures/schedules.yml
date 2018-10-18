@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codschedule: MyString
+  dias: MyString
+  inicio: MyString
+  fin: MyString
+  id_subject: one
+
+two:
+  codschedule: MyString
+  dias: MyString
+  inicio: MyString
+  fin: MyString
+  id_subject: two

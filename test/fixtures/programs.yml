@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codprogram: MyString
+  nombre: MyString
+  id_school: one
+  id_teacher: one
+
+two:
+  codprogram: MyString
+  nombre: MyString
+  id_school: two
+  id_teacher: two

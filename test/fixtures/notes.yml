@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  note: 1
+  id_student: one
+  id_group: one
+  id_subject: one
+
+two:
+  note: 1
+  id_student: two
+  id_group: two
+  id_subject: two
