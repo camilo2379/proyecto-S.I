@@ -1,13 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  codschool: MyString
   nombre: MyString
-  id_teacher: one
-  id_subject: one
 
 two:
-  codschool: MyString
   nombre: MyString
-  id_teacher: two
-  id_subject: two

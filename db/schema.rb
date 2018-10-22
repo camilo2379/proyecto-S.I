@@ -10,25 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181018062245) do
+ActiveRecord::Schema.define(version: 20181021214552) do
+
+  create_table "credits", force: :cascade do |t|
+    t.integer "numero", limit: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "docentes", force: :cascade do |t|
+    t.string "nombre", default: "", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_docentes_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_docentes_on_reset_password_token", unique: true
+  end
 
   create_table "facultads", force: :cascade do |t|
     t.integer "codigo", null: false
     t.string "nombre", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "groups", force: :cascade do |t|
-    t.string "codgroup", limit: 20
-    t.integer "id_subject_id"
-    t.integer "id_teacher_id"
-    t.integer "id_student_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["id_student_id"], name: "index_groups_on_id_student_id"
-    t.index ["id_subject_id"], name: "index_groups_on_id_subject_id"
-    t.index ["id_teacher_id"], name: "index_groups_on_id_teacher_id"
   end
 
   create_table "grupos", force: :cascade do |t|
@@ -52,15 +59,11 @@ ActiveRecord::Schema.define(version: 20181018062245) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.integer "note"
-    t.integer "id_student_id"
-    t.integer "id_group_id"
-    t.integer "id_subject_id"
+    t.float "valor"
+    t.integer "semester_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["id_group_id"], name: "index_notes_on_id_group_id"
-    t.index ["id_student_id"], name: "index_notes_on_id_student_id"
-    t.index ["id_subject_id"], name: "index_notes_on_id_subject_id"
+    t.index ["semester_id"], name: "index_notes_on_semester_id"
   end
 
   create_table "profesors", force: :cascade do |t|
@@ -84,36 +87,26 @@ ActiveRecord::Schema.define(version: 20181018062245) do
   end
 
   create_table "programs", force: :cascade do |t|
-    t.string "codprogram", limit: 20
-    t.string "nombre"
-    t.integer "id_school_id"
-    t.integer "id_teacher_id"
+    t.integer "codigo"
+    t.string "nombre", limit: 25
+    t.integer "school_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["id_school_id"], name: "index_programs_on_id_school_id"
-    t.index ["id_teacher_id"], name: "index_programs_on_id_teacher_id"
+    t.index ["school_id"], name: "index_programs_on_school_id"
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.string "codschedule", limit: 20
-    t.string "dias"
-    t.string "inicio"
-    t.string "fin"
-    t.integer "id_subject_id"
+    t.string "dia"
+    t.time "hora_inicio"
+    t.time "hora_fin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["id_subject_id"], name: "index_schedules_on_id_subject_id"
   end
 
   create_table "schools", force: :cascade do |t|
-    t.string "codschool", limit: 20
-    t.string "nombre"
-    t.integer "id_teacher_id"
-    t.integer "id_subject_id"
+    t.string "nombre", limit: 20
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["id_subject_id"], name: "index_schools_on_id_subject_id"
-    t.index ["id_teacher_id"], name: "index_schools_on_id_teacher_id"
   end
 
   create_table "sedes", force: :cascade do |t|
@@ -127,8 +120,7 @@ ActiveRecord::Schema.define(version: 20181018062245) do
   end
 
   create_table "semesters", force: :cascade do |t|
-    t.integer "numero"
-    t.date "fecha_inicio"
+    t.integer "numero", limit: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -141,26 +133,48 @@ ActiveRecord::Schema.define(version: 20181018062245) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string "codigo", limit: 20
+    t.integer "codigo"
     t.string "nombre", limit: 20
     t.string "apellido", limit: 20
+    t.integer "documento"
+    t.float "promedio"
+    t.integer "schedule_id"
     t.integer "user_id"
-    t.integer "program_id"
+    t.integer "school_id"
+    t.integer "semester_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["program_id"], name: "index_students_on_program_id"
+    t.index ["schedule_id"], name: "index_students_on_schedule_id"
+    t.index ["school_id"], name: "index_students_on_school_id"
+    t.index ["semester_id"], name: "index_students_on_semester_id"
     t.index ["user_id"], name: "index_students_on_user_id"
   end
 
   create_table "subjects", force: :cascade do |t|
-    t.string "codsubject", limit: 20
-    t.string "nombre"
-    t.integer "id_credit_id"
-    t.integer "id_program_id"
+    t.integer "codigo"
+    t.string "nombre", limit: 25
+    t.integer "credit_id"
+    t.integer "note_id"
+    t.integer "program_id"
+    t.integer "schedule_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["id_credit_id"], name: "index_subjects_on_id_credit_id"
-    t.index ["id_program_id"], name: "index_subjects_on_id_program_id"
+    t.index ["credit_id"], name: "index_subjects_on_credit_id"
+    t.index ["note_id"], name: "index_subjects_on_note_id"
+    t.index ["program_id"], name: "index_subjects_on_program_id"
+    t.index ["schedule_id"], name: "index_subjects_on_schedule_id"
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.integer "codigo"
+    t.string "nombre", limit: 20
+    t.string "apellido", limit: 20
+    t.integer "school_id"
+    t.integer "schedule_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["schedule_id"], name: "index_teachers_on_schedule_id"
+    t.index ["school_id"], name: "index_teachers_on_school_id"
   end
 
   create_table "users", force: :cascade do |t|

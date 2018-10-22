@@ -5,10 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Codschool</th>
       <th>Nombre</th>
-      <th>Id teacher</th>
-      <th>Id subject</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +13,7 @@
   <tbody>
     <% @schools.each do |school| %>
       <tr>
-        <td><%= school.codschool %></td>
         <td><%= school.nombre %></td>
-        <td><%= school.id_teacher %></td>
-        <td><%= school.id_subject %></td>
         <td><%= link_to 'Show', school %></td>
         <td><%= link_to 'Edit', edit_school_path(school) %></td>
         <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -16,13 +16,33 @@
 </p>
 
 <p>
+  <strong>Documento:</strong>
+  <%= @student.documento %>
+</p>
+
+<p>
+  <strong>Promedio:</strong>
+  <%= @student.promedio %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @student.schedule %>
+</p>
+
+<p>
   <strong>User:</strong>
   <%= @student.user %>
 </p>
 
 <p>
-  <strong>Program:</strong>
-  <%= @student.program %>
+  <strong>School:</strong>
+  <%= @student.school %>
+</p>
+
+<p>
+  <strong>Semester:</strong>
+  <%= @student.semester %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |

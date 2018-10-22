@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
-
+  resources :credits
+  resources :semesters
   resources :students
   devise_for :users
-  resources :schedules
-  resources :groups
-  resources :semesters
-  resources :notes
+  devise_for :docentes
+  resources :teachers
   resources :schools
-  resources :programs
+  resources :schedules
   resources :subjects
+  resources :notes
+  resources :programs
  
 #declarar rutas	
   get 'bienvenido/index'

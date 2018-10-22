@@ -69,6 +69,6 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:note, :id_student_id, :id_group_id, :id_subject_id)
+      params.require(:note).permit(:valor, :semester_id)
     end
 end

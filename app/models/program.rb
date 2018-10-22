@@ -1,4 +1,4 @@
 class Program < ApplicationRecord
-  belongs_to :id_school
-  belongs_to :id_teacher
+  belongs_to :school
+  has_many :subjects
 end

@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Codsubject:</strong>
-  <%= @subject.codsubject %>
+  <strong>Codigo:</strong>
+  <%= @subject.codigo %>
 </p>
 
 <p>
@@ -11,13 +11,23 @@
 </p>
 
 <p>
-  <strong>Id credit:</strong>
-  <%= @subject.id_credit %>
+  <strong>Credit:</strong>
+  <%= @subject.credit %>
 </p>
 
 <p>
-  <strong>Id program:</strong>
-  <%= @subject.id_program %>
+  <strong>Note:</strong>
+  <%= @subject.note %>
+</p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @subject.program %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @subject.schedule %>
 </p>
 
 <%= link_to 'Edit', edit_subject_path(@subject) %> |

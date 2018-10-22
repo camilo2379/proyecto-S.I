@@ -1,5 +1,4 @@
 class Note < ApplicationRecord
-  belongs_to :id_student
-  belongs_to :id_group
-  belongs_to :id_subject
+  belongs_to :semester
+  has_many :subjects
 end

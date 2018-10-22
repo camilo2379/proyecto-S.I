@@ -1,28 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Codschedule:</strong>
-  <%= @schedule.codschedule %>
+  <strong>Dia:</strong>
+  <%= @schedule.dia %>
 </p>
 
 <p>
-  <strong>Dias:</strong>
-  <%= @schedule.dias %>
+  <strong>Hora inicio:</strong>
+  <%= @schedule.hora_inicio %>
 </p>
 
 <p>
-  <strong>Inicio:</strong>
-  <%= @schedule.inicio %>
-</p>
-
-<p>
-  <strong>Fin:</strong>
-  <%= @schedule.fin %>
-</p>
-
-<p>
-  <strong>Id subject:</strong>
-  <%= @schedule.id_subject %>
+  <strong>Hora fin:</strong>
+  <%= @schedule.hora_fin %>
 </p>
 
 <%= link_to 'Edit', edit_schedule_path(@schedule) %> |

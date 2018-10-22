@@ -12,23 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :note %>
-    <%= form.number_field :note, id: :note_note %>
+    <%= form.label :valor %>
+    <%= form.text_field :valor, id: :note_valor %>
   </div>
 
   <div class="field">
-    <%= form.label :id_student_id %>
-    <%= form.text_field :id_student_id, id: :note_id_student_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :id_group_id %>
-    <%= form.text_field :id_group_id, id: :note_id_group_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :id_subject_id %>
-    <%= form.text_field :id_subject_id, id: :note_id_subject_id %>
+    <%= form.label :semester_id %>
+    <%= form.text_field :semester_id, id: :note_semester_id %>
   </div>
 
   <div class="actions">

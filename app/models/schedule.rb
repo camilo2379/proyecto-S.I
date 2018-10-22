@@ -1,3 +1,5 @@
 class Schedule < ApplicationRecord
-  belongs_to :id_subject
+	has_many :students
+	has_many :teachers
+	has_many :subjects
 end

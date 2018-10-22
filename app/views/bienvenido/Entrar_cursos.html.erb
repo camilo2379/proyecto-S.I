@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,19 +26,23 @@
 		</nav>
 		</div>
 		</header>
-		<div class="texto">
-			<center>
-				<h1 class="parrafo">Bienvenid@ a Cursos </h1>
-				<p class="inicio"> Inicio De Sesión </p>
-			</center>
+		<% if user_signed_in? %>
+		<center><h1 class="parrafo">Bienvenid@ a Cursos </h1>
+			<h3 class="parrafo">A continuación podra ver su acumulado en el semestre </h3>
 
-		</div>
-		<center><img src="<%= asset_path 'usuario.png' %>" width="150px" height="150px">
-			<label class="Usuario">Usuario</label>
-	    <input type="text" class ="UsuarioT" name="UsuarioT" /></center>
-	    <center><label class="Contraseña">Contraseña</label>
-	    <input type="text" class="ContraseñaT" name="ContraseñaT" /></center>
-			<center><a href=""><p class="boton_curso">Entrar</p></center>		
+			   <a href="../students" > ver </a>
+        
+                                   
+		<% else %>
+			   <center><img src="<%= asset_path 'usuario.png' %>" width="300px" height="300px">
+			  <div style="color:orange; font-family: helvetica; font-size:100%" >	
+
+			  <%= link_to "Registrarse", new_user_registration_path, :class => 'navbar-link'  %>
+			  <%= link_to "Iniciar Sesion", new_user_session_path, :class => 'navbar-link'  %>
+			</div></center>
+			</div>
+			<% end %>
+				
 	</div>
 		</div>
 		<center>

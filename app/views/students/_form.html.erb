@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :codigo %>
-    <%= form.text_field :codigo, id: :student_codigo %>
+    <%= form.number_field :codigo, id: :student_codigo %>
   </div>
 
   <div class="field">
@@ -27,13 +27,33 @@
   </div>
 
   <div class="field">
+    <%= form.label :documento %>
+    <%= form.number_field :documento, id: :student_documento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :promedio %>
+    <%= form.text_field :promedio, id: :student_promedio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :schedule_id %>
+    <%= form.text_field :schedule_id, id: :student_schedule_id %>
+  </div>
+
+  <div class="field">
     <%= form.label :user_id %>
     <%= form.text_field :user_id, id: :student_user_id %>
   </div>
 
   <div class="field">
-    <%= form.label :program_id %>
-    <%= form.text_field :program_id, id: :student_program_id %>
+    <%= form.label :school_id %>
+    <%= form.text_field :school_id, id: :student_school_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :semester_id %>
+    <%= form.text_field :semester_id, id: :student_semester_id %>
   </div>
 
   <div class="actions">

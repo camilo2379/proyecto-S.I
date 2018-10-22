@@ -5,10 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Note</th>
-      <th>Id student</th>
-      <th>Id group</th>
-      <th>Id subject</th>
+      <th>Valor</th>
+      <th>Semester</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +14,8 @@
   <tbody>
     <% @notes.each do |note| %>
       <tr>
-        <td><%= note.note %></td>
-        <td><%= note.id_student %></td>
-        <td><%= note.id_group %></td>
-        <td><%= note.id_subject %></td>
+        <td><%= note.valor %></td>
+        <td><%= note.semester %></td>
         <td><%= link_to 'Show', note %></td>
         <td><%= link_to 'Edit', edit_note_path(note) %></td>
         <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>

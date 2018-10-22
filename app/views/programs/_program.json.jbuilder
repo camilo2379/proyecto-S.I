@@ -1,2 +1,2 @@
-json.extract! program, :id, :codprogram, :nombre, :id_school_id, :id_teacher_id, :created_at, :updated_at
+json.extract! program, :id, :codigo, :nombre, :school_id, :created_at, :updated_at
 json.url program_url(program, format: :json)

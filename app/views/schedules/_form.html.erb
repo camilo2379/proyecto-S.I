@@ -12,28 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :codschedule %>
-    <%= form.text_field :codschedule, id: :schedule_codschedule %>
+    <%= form.label :dia %>
+    <%= form.text_field :dia, id: :schedule_dia %>
   </div>
 
   <div class="field">
-    <%= form.label :dias %>
-    <%= form.text_field :dias, id: :schedule_dias %>
+    <%= form.label :hora_inicio %>
+    <%= form.time_select :hora_inicio, id: :schedule_hora_inicio %>
   </div>
 
   <div class="field">
-    <%= form.label :inicio %>
-    <%= form.text_field :inicio, id: :schedule_inicio %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fin %>
-    <%= form.text_field :fin, id: :schedule_fin %>
-  </div>
-
-  <div class="field">
-    <%= form.label :id_subject_id %>
-    <%= form.text_field :id_subject_id, id: :schedule_id_subject_id %>
+    <%= form.label :hora_fin %>
+    <%= form.time_select :hora_fin, id: :schedule_hora_fin %>
   </div>
 
   <div class="actions">

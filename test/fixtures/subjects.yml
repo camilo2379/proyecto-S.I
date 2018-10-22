@@ -1,13 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  codsubject: MyString
+  codigo: 1
   nombre: MyString
-  id_credit: one
-  id_program: one
+  credit: one
+  note: one
+  program: one
+  schedule: one
 
 two:
-  codsubject: MyString
+  codigo: 1
   nombre: MyString
-  id_credit: two
-  id_program: two
+  credit: two
+  note: two
+  program: two
+  schedule: two

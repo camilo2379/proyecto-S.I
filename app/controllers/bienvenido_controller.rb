@@ -9,4 +9,5 @@ class BienvenidoController < ApplicationController
   end
   def contactenos
   end
+
 end

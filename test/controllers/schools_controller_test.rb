@@ -17,7 +17,7 @@ class SchoolsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create school" do
     assert_difference('School.count') do
-      post schools_url, params: { school: { codschool: @school.codschool, id_subject_id: @school.id_subject_id, id_teacher_id: @school.id_teacher_id, nombre: @school.nombre } }
+      post schools_url, params: { school: { nombre: @school.nombre } }
     end
 
     assert_redirected_to school_url(School.last)
@@ -34,7 +34,7 @@ class SchoolsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update school" do
-    patch school_url(@school), params: { school: { codschool: @school.codschool, id_subject_id: @school.id_subject_id, id_teacher_id: @school.id_teacher_id, nombre: @school.nombre } }
+    patch school_url(@school), params: { school: { nombre: @school.nombre } }
     assert_redirected_to school_url(@school)
   end
 
