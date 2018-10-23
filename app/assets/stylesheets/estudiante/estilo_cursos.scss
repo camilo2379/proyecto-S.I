@@ -4,7 +4,7 @@ body{
 }
 img{
 	display: block;
-	max-width: 100%
+	max-width: 100%;
 }
 .logo{
 	opacity: 0.8;
@@ -20,7 +20,7 @@ img{
 .icon-menu{
 	display: block;
 	width: 40px;
-	height: 40px
+	height: 40px;
 	font-size: 40px;
 	background: orange;
 	color: #fff;
@@ -42,7 +42,7 @@ img{
 	list-style: none;
 	padding:20px;
 	margin:0;
-	width: 100%
+	width: 100%;
 }
 .menu_link{
 	display: block;
@@ -92,7 +92,7 @@ img{
 }
 /*----------Estilo Boton-------- */
 .boton{
-	 position:; center;
+	 position: center;
 }
 .boton_curso{
 	display: block;
@@ -104,7 +104,7 @@ img{
 	width:200px;
 	height: 40px;
 	line-height: 40px;
-	font-family: impact,sans-serif
+	font-family: impact,sans-serif;
 }
 .boton_curso:hover{
 	background: black;
@@ -208,7 +208,7 @@ img{
 	}
 	.menu{
 		display:flex;
-		margin-right: 50px
+		margin-right: 50px;
 	}
 	.select {
 		background: orange;

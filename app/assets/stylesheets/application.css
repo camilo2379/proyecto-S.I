@@ -19,7 +19,7 @@ body{
 }
 img{
 	display: block;
-	max-width: 100%
+	max-width: 100%;
 }
 .logo{
 	opacity: 0.8;
@@ -35,7 +35,7 @@ img{
 .icon-menu{
 	display: block;
 	width: 40px;
-	height: 40px
+	height: 40px;
 	font-size: 40px;
 	background: orange;
 	color: #fff;
@@ -57,7 +57,7 @@ img{
 	list-style: none;
 	padding:20px;
 	margin:0;
-	width: 100%
+	width: 100%;
 }
 .menu_link{
 	display: block;
