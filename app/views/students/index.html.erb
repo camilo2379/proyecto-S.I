@@ -1,10 +1,11 @@
+<%= stylesheet_link_tag 'estudiante/estilo_moniusuario' , :media => "all" %>
 <p id="notice"><%= notice %></p>
 
 <h1>Students</h1>
 
 <table>
   <thead>
-    <tr>
+    <tr class="columna1">
       <th>Codigo</th>
       <th>Nombre</th>
       <th>Apellido</th>
@@ -19,9 +20,9 @@
   </thead>
 
   <tbody>
-    <% if user_signed_in? %>
+    <% if docente_signed_in? %>
     <% @students.each do |student| %>
-      <tr>
+      <tr class="columna2">
         <td><%= student.codigo %></td>
         <td><%= student.nombre %></td>
         <td><%= student.apellido %></td>
@@ -40,5 +41,5 @@
 </table>
 <br>
 <%else%>
-<%= link_to 'New Student', new_student_path %>
+<%= link_to 'Nuevo estudiante', new_student_path %>
 <%end%>

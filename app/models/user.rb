@@ -5,5 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :email, presence: true        
   has_one :student,dependent: :destroy
+  def to_s
+  	email
+  end
     
 end
