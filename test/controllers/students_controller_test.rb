@@ -17,7 +17,7 @@ class StudentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create student" do
     assert_difference('Student.count') do
-      post students_url, params: { student: { apellido: @student.apellido, codigo: @student.codigo, documento: @student.documento, nombre: @student.nombre, promedio: @student.promedio, schedule_id: @student.schedule_id, school_id: @student.school_id, semester_id: @student.semester_id, user_id: @student.user_id } }
+      post students_url, params: { student: { Schedule_id: @student.Schedule_id, School_id: @student.School_id, Semester_id: @student.Semester_id, User_id: @student.User_id, apellido: @student.apellido, documento: @student.documento, nombre: @student.nombre, promedio: @student.promedio, tipo_estudiante: @student.tipo_estudiante } }
     end
 
     assert_redirected_to student_url(Student.last)
@@ -34,7 +34,7 @@ class StudentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update student" do
-    patch student_url(@student), params: { student: { apellido: @student.apellido, codigo: @student.codigo, documento: @student.documento, nombre: @student.nombre, promedio: @student.promedio, schedule_id: @student.schedule_id, school_id: @student.school_id, semester_id: @student.semester_id, user_id: @student.user_id } }
+    patch student_url(@student), params: { student: { Schedule_id: @student.Schedule_id, School_id: @student.School_id, Semester_id: @student.Semester_id, User_id: @student.User_id, apellido: @student.apellido, documento: @student.documento, nombre: @student.nombre, promedio: @student.promedio, tipo_estudiante: @student.tipo_estudiante } }
     assert_redirected_to student_url(@student)
   end
 

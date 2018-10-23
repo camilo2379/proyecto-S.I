@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181021214552) do
+ActiveRecord::Schema.define(version: 20181023052950) do
 
   create_table "credits", force: :cascade do |t|
     t.integer "numero", limit: 2
@@ -48,14 +48,6 @@ ActiveRecord::Schema.define(version: 20181021214552) do
     t.index ["curso_id"], name: "index_grupos_on_curso_id"
     t.index ["estudiante_id"], name: "index_grupos_on_estudiante_id"
     t.index ["profesor_id"], name: "index_grupos_on_profesor_id"
-  end
-
-  create_table "horarios", force: :cascade do |t|
-    t.string "dia"
-    t.string "hora_inicio"
-    t.string "hora_fin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "notes", force: :cascade do |t|
@@ -133,21 +125,21 @@ ActiveRecord::Schema.define(version: 20181021214552) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.integer "codigo"
     t.string "nombre", limit: 20
     t.string "apellido", limit: 20
-    t.integer "documento"
-    t.float "promedio"
-    t.integer "schedule_id"
-    t.integer "user_id"
-    t.integer "school_id"
-    t.integer "semester_id"
+    t.integer "documento", limit: 15
+    t.integer "tipo_estudiante", limit: 1
+    t.decimal "promedio"
+    t.integer "Schedule_id"
+    t.integer "User_id"
+    t.integer "School_id"
+    t.integer "Semester_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["schedule_id"], name: "index_students_on_schedule_id"
-    t.index ["school_id"], name: "index_students_on_school_id"
-    t.index ["semester_id"], name: "index_students_on_semester_id"
-    t.index ["user_id"], name: "index_students_on_user_id"
+    t.index ["Schedule_id"], name: "index_students_on_Schedule_id"
+    t.index ["School_id"], name: "index_students_on_School_id"
+    t.index ["Semester_id"], name: "index_students_on_Semester_id"
+    t.index ["User_id"], name: "index_students_on_User_id"
   end
 
   create_table "subjects", force: :cascade do |t|

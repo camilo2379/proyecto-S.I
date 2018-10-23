@@ -1,23 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  codigo: 1
   nombre: MyString
   apellido: MyString
   documento: 1
-  promedio: 1.5
-  schedule: one
-  user: one
-  school: one
-  semester: one
+  tipo_estudiante: 1
+  promedio: 9.99
+  Schedule: one
+  User: one
+  School: one
+  Semester: one
 
 two:
-  codigo: 1
   nombre: MyString
   apellido: MyString
   documento: 1
-  promedio: 1.5
-  schedule: two
-  user: two
-  school: two
-  semester: two
+  tipo_estudiante: 1
+  promedio: 9.99
+  Schedule: two
+  User: two
+  School: two
+  Semester: two

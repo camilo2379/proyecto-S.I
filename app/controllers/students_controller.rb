@@ -10,7 +10,6 @@ class StudentsController < ApplicationController
   # GET /students/1
   # GET /students/1.json
   def show
-  @student = Student.find(params[:id])
   end
 
   # GET /students/new
@@ -70,6 +69,6 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:codigo, :nombre, :apellido, :documento, :promedio, :schedule_id, :user_id, :school_id, :semester_id)
+      params.require(:student).permit(:nombre, :apellido, :documento, :tipo_estudiante, :promedio, :Schedule_id, :User_id, :School_id, :Semester_id)
     end
 end

@@ -1,10 +1,25 @@
 <p id="notice"><%= notice %></p>
-
+<%= stylesheet_link_tag 'estudiante/estilo_moniusuario' , :media => "all" %>
+<header class="header">
+  <div class="contenedor" >
+      <img class="logo"  src="<%= asset_path 'logo.jpg' %>"  width="400px" height="80px">
+      <span class="icon-menu" id="btn-menu"></span>
+      <nav class="nav" id="nav">
+      <ul class="menu">
+      <li class="menu-item"><a class="menu_link select"  href="../bienvenido/index.html">Inicio</a></li>
+      <li class="menu-item"><a class="menu_link" href="../bienvenido/monitorias.html">Monitorias</a>
+      <li class="menu-item"><a class="menu_link" href="../bienvenido/nosotros.html">Estudia Con Nosotros</a></li>
+      <li class="menu-item"><a class="menu_link" href="../bienvenido/cursos.html">Cursos</a></li>
+      <li class="menu-item"><a class="menu_link" href="../bienvenido/contactenos.html">Contactenos</a></li>
+    </ul>
+    </nav>
+    </div>
+    </header>
 <h1>Schedules</h1>
 
 <table>
   <thead>
-    <tr>
+    <tr class="columna1">
       <th>Dia</th>
       <th>Hora inicio</th>
       <th>Hora fin</th>
@@ -14,10 +29,11 @@
 
   <tbody>
     <% @schedules.each do |schedule| %>
-      <tr>
+      <tr class="columna2">
         <td><%= schedule.dia %></td>
         <td><%= schedule.hora_inicio %></td>
         <td><%= schedule.hora_fin %></td>
+     
         <td><%= link_to 'Show', schedule %></td>
         <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
         <td><%= link_to 'Destroy', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>

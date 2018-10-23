@@ -6,6 +6,7 @@
     <%= stylesheet_link_tag 'estilo' , :media => "all" %> 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href = "https://file.myfontastic.com/XtWFitEh4zLMe4dYwnqHvZ/icons.css" rel = "stylesheet">
+   
     <% if user_signed_in? %>
         <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete, :class => 'navbar-link'%>
     <%end%>    

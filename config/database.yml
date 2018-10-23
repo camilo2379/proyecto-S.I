@@ -23,7 +23,9 @@ test:
 
 production:
   adapter: postgresql
-  database: d4vs0g3pd64l3p
-  username: pfersjxakyrzou
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  encoding: unicode
+  database: test-postgres_production
+  pool: 5
+  username: test-postgres
+  password:
   port: 5432
